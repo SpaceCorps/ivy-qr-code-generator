@@ -11,6 +11,6 @@ server.AddConnectionsFromAssembly();
 
 // Register services
 server.Services.AddScoped<IQrCodeService, QrCodeService>();
-var chromeSettings = new ChromeSettings().DefaultApp<HelloApp>().UseTabs(preventDuplicates: true);
+var chromeSettings = new ChromeSettings().DefaultApp<QrCodeApp>().UseTabs(preventDuplicates: true);
 server.UseChrome(chromeSettings);
 await server.RunAsync();
